@@ -13,7 +13,7 @@ const Hero = (props: Props) => {
     <section className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip">
       {/* Halka bölümleri  */}
       <div
-        className="absolute inset-0 -z-30 opacity-5"
+        className="absolute inset-0 -z-30 opacity-10"
         style={{
           backgroundImage: `url(${grainImage.src})`,
         }}
@@ -24,20 +24,26 @@ const Hero = (props: Props) => {
       <div className="absolute inset-0 size-[1070px] border-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-orange-300/5 shadow-[0_0_80px_inset] shadow-orange-300/5" />
 
       {/* Yıldızlar */}
-      <HeroStars size={800} rotation={-72}>
-        <IoIosStar className="size-12 text-orange-300" />
+      <HeroStars size={620} rotation={-72}>
+        <IoIosStar className="size-12 text-orange-300/40" />
       </HeroStars>
       <HeroStars size={800} rotation={-20}>
-        <PiStarFourFill className="w-12 h-12 text-orange-300" />
+        <PiStarFourFill className="w-12 h-12 text-orange-300/60" />
       </HeroStars>
-      <HeroStars size={800} rotation={180}>
-        <PiStarFourFill className="w-12 h-12 text-orange-300" />
+      <HeroStars size={550} rotation={180}>
+        <PiStarFourFill className="w-12 h-12 text-orange-300/40" />
       </HeroStars>
-      <HeroStars size={800} rotation={220}>
-        <PiStarFourFill className="w-12 h-12 text-orange-300" />
+      <HeroStars size={550} rotation={180}>
+        <PiStarFourFill className="w-12 h-12 text-orange-300/40" />
+      </HeroStars>
+      <HeroStars size={480} rotation={50}>
+        <PiStarFourFill className="w-12 h-12 text-orange-300/40" />
+      </HeroStars>
+      <HeroStars size={570} rotation={220}>
+        <PiStarFourFill className="w-12 h-12 text-orange-300/70" />
       </HeroStars>
       <HeroStars size={800} rotation={120}>
-        <IoIosStar className="size-12 text-orange-300" />
+        <IoIosStar className="size-12 text-orange-300/30" />
       </HeroStars>
       <div className="container">
         <div className="flex flex-col items-center">
