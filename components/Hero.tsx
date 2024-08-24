@@ -54,7 +54,7 @@ const Hero = (props: Props) => {
       <HeroStars size={450} rotation={135}>
         <div className="size-3 rounded-full bg-orange-300/20 " />
       </HeroStars>
-      <div className="container">
+      <div className="container z-20">
         <div className="flex flex-col items-center">
           <Image
             src={"/logo.png"}
@@ -81,11 +81,11 @@ const Hero = (props: Props) => {
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center gap-4 items-center mt-8">
-          <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
+          <button className="inline-flex group items-center gap-2 border border-white/15 px-6 h-12 rounded-xl z-30 cursor-pointer hover:bg-white/10">
             <span className="font-semibold">Explore</span>
-            <ArrowDown className="h-6 w-6" />
+            <ArrowDown className="h-6 w-6 group-hover:text-orange-300" />
           </button>
-          <button className="inline-flex items-center gap-2 border border-white bg-white text-neutral-950 h-12 px-6 rounded-xl">
+          <button className="inline-flex items-center gap-2 border border-white bg-white text-neutral-950 z-30 hover:bg-white/70 h-12 px-6 rounded-xl">
             <span>🌟</span>
             <span className="font-semibold">Let get in touch</span>
           </button>
