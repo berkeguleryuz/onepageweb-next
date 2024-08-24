@@ -25,25 +25,34 @@ const Hero = (props: Props) => {
 
       {/* Yıldızlar */}
       <HeroStars size={620} rotation={-72}>
-        <IoIosStar className="size-12 text-orange-300/40" />
+        <IoIosStar className="size-7 text-orange-300/20" />
       </HeroStars>
       <HeroStars size={800} rotation={-20}>
-        <PiStarFourFill className="w-12 h-12 text-orange-300/60" />
+        <PiStarFourFill className="w-12 h-12 text-orange-300/30" />
+      </HeroStars>
+      <HeroStars size={550} rotation={100}>
+        <PiStarFourFill className="w-6 h-6 text-orange-300/20" />
       </HeroStars>
       <HeroStars size={550} rotation={180}>
-        <PiStarFourFill className="w-12 h-12 text-orange-300/40" />
-      </HeroStars>
-      <HeroStars size={550} rotation={180}>
-        <PiStarFourFill className="w-12 h-12 text-orange-300/40" />
+        <PiStarFourFill className="w-11 h-11 text-orange-300/10" />
       </HeroStars>
       <HeroStars size={480} rotation={50}>
-        <PiStarFourFill className="w-12 h-12 text-orange-300/40" />
+        <PiStarFourFill className="w-8 h-8 text-orange-300/20" />
       </HeroStars>
       <HeroStars size={570} rotation={220}>
-        <PiStarFourFill className="w-12 h-12 text-orange-300/70" />
+        <PiStarFourFill className="w-4 h-4  text-orange-300/10" />
       </HeroStars>
       <HeroStars size={800} rotation={120}>
         <IoIosStar className="size-12 text-orange-300/30" />
+      </HeroStars>
+      <HeroStars size={450} rotation={0}>
+        <div className="size-3 rounded-full bg-orange-300/20 " />
+      </HeroStars>
+      <HeroStars size={450} rotation={210}>
+        <div className="size-3 rounded-full bg-orange-300/20 " />
+      </HeroStars>
+      <HeroStars size={450} rotation={135}>
+        <div className="size-3 rounded-full bg-orange-300/20 " />
       </HeroStars>
       <div className="container">
         <div className="flex flex-col items-center">
