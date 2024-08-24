@@ -1,10 +1,14 @@
+import FeaturedProjects from "@/components/FeaturedProjects";
 import Hero from "@/components/Hero";
 import Nav from "@/components/Nav";
 import Image from "next/image";
 
 export default function Home() {
-  return <main>
-    <Nav />
-    <Hero />
-  </main>;
+  return (
+    <main>
+      <Nav />
+      <Hero />
+      <FeaturedProjects />
+    </main>
+  );
 }

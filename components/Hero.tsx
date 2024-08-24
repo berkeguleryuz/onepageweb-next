@@ -11,49 +11,51 @@ type Props = {};
 const Hero = (props: Props) => {
   return (
     <section className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip">
-      {/* Halka bölümleri  */}
-      <div
-        className="absolute inset-0 -z-30 opacity-10"
-        style={{
-          backgroundImage: `url(${grainImage.src})`,
-        }}
-      />
-      <div className="absolute inset-0 size-[620px] border-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-orange-300/5 shadow-[0_0_80px_inset] shadow-orange-300/5" />
-      <div className="absolute inset-0 size-[770px] border-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-orange-300/5 shadow-[0_0_80px_inset] shadow-orange-300/5" />
-      <div className="absolute inset-0 size-[920px] border-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-orange-300/5 shadow-[0_0_80px_inset] shadow-orange-300/5" />
-      <div className="absolute inset-0 size-[1070px] border-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-orange-300/5 shadow-[0_0_80px_inset] shadow-orange-300/5" />
+      <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
+        {/* Halka bölümleri  */}
+        <div
+          className="absolute inset-0 -z-30 opacity-10"
+          style={{
+            backgroundImage: `url(${grainImage.src})`,
+          }}
+        />
+        <div className="absolute inset-0 size-[620px] border-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-orange-300/5 shadow-[0_0_80px_inset] shadow-orange-300/5" />
+        <div className="absolute inset-0 size-[770px] border-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-orange-300/5 shadow-[0_0_80px_inset] shadow-orange-300/5" />
+        <div className="absolute inset-0 size-[920px] border-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-orange-300/5 shadow-[0_0_80px_inset] shadow-orange-300/5" />
+        <div className="absolute inset-0 size-[1070px] border-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-orange-300/5 shadow-[0_0_80px_inset] shadow-orange-300/5" />
 
-      {/* Yıldızlar */}
-      <HeroStars size={620} rotation={-72}>
-        <IoIosStar className="size-7 text-orange-300/20" />
-      </HeroStars>
-      <HeroStars size={800} rotation={-20}>
-        <PiStarFourFill className="w-12 h-12 text-orange-300/30" />
-      </HeroStars>
-      <HeroStars size={550} rotation={100}>
-        <PiStarFourFill className="w-6 h-6 text-orange-300/20" />
-      </HeroStars>
-      <HeroStars size={550} rotation={180}>
-        <PiStarFourFill className="w-11 h-11 text-orange-300/10" />
-      </HeroStars>
-      <HeroStars size={480} rotation={50}>
-        <PiStarFourFill className="w-8 h-8 text-orange-300/20" />
-      </HeroStars>
-      <HeroStars size={570} rotation={220}>
-        <PiStarFourFill className="w-4 h-4  text-orange-300/10" />
-      </HeroStars>
-      <HeroStars size={800} rotation={120}>
-        <IoIosStar className="size-12 text-orange-300/30" />
-      </HeroStars>
-      <HeroStars size={450} rotation={0}>
-        <div className="size-3 rounded-full bg-orange-300/20 " />
-      </HeroStars>
-      <HeroStars size={450} rotation={210}>
-        <div className="size-3 rounded-full bg-orange-300/20 " />
-      </HeroStars>
-      <HeroStars size={450} rotation={135}>
-        <div className="size-3 rounded-full bg-orange-300/20 " />
-      </HeroStars>
+        {/* Yıldızlar */}
+        <HeroStars size={620} rotation={-72}>
+          <IoIosStar className="size-7 text-orange-300/20" />
+        </HeroStars>
+        <HeroStars size={800} rotation={-20}>
+          <PiStarFourFill className="w-12 h-12 text-orange-300/30" />
+        </HeroStars>
+        <HeroStars size={550} rotation={100}>
+          <PiStarFourFill className="w-6 h-6 text-orange-300/20" />
+        </HeroStars>
+        <HeroStars size={550} rotation={180}>
+          <PiStarFourFill className="w-11 h-11 text-orange-300/10" />
+        </HeroStars>
+        <HeroStars size={480} rotation={50}>
+          <PiStarFourFill className="w-8 h-8 text-orange-300/20" />
+        </HeroStars>
+        <HeroStars size={570} rotation={220}>
+          <PiStarFourFill className="w-4 h-4  text-orange-300/10" />
+        </HeroStars>
+        <HeroStars size={800} rotation={120}>
+          <IoIosStar className="size-12 text-orange-300/30" />
+        </HeroStars>
+        <HeroStars size={450} rotation={0}>
+          <div className="size-3 rounded-full bg-orange-300/20 " />
+        </HeroStars>
+        <HeroStars size={450} rotation={210}>
+          <div className="size-3 rounded-full bg-orange-300/20 " />
+        </HeroStars>
+        <HeroStars size={450} rotation={135}>
+          <div className="size-3 rounded-full bg-orange-300/20 " />
+        </HeroStars>
+      </div>
       <div className="container z-20">
         <div className="flex flex-col items-center">
           <Image
