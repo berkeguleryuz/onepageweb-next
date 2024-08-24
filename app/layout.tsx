@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Montserrat, Calistoga } from "next/font/google";
+import { Jersey_10, Montserrat, Yaldevi } from "next/font/google";
 import "./globals.css";
 import { twMerge } from "tailwind-merge";
 
 const font = Montserrat({ subsets: ["latin"], variable: "--font-sans" });
-const calistoga = Calistoga({
+const jersey = Jersey_10({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-serif",
@@ -25,7 +25,7 @@ export default function RootLayout({
       <body
         className={twMerge(
           "bg-neutral-950 text-white antialiased font-sans",
-          calistoga.variable,
+          jersey.variable,
           font.variable,
         )}>
         {children}
