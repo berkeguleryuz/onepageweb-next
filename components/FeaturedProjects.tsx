@@ -44,7 +44,7 @@ const portfolioProjects = [
 const FeaturedProjects = (props: Props) => {
   return (
     <section className="pb-16 lg:py-24">
-      <div className="container max-w-5xl">
+      <div className="container">
         <p className="font-semibold  tracking-widest bg-gradient-to-b from-orange-300 to-yellow-300 text-transparent bg-clip-text uppercase text-center text-lg md:text-2xl">
           Real World Process
         </p>
@@ -96,7 +96,7 @@ const FeaturedProjects = (props: Props) => {
                     alt={project.title}
                     width={2000}
                     height={2000}
-                    className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:rounded-t-xl"
+                    className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:rounded-t-xl object-top object-cover lg:max-w-none lg:w-auto"
                     priority
                   />
                 </div>
