@@ -136,7 +136,7 @@ const About = (props: Props) => {
               <div className="inline-flex gap-2 font-bold uppercase items-center justify-center tracking-widest">
                 <PiStarFourFill />
                 <h3>Beyond the work</h3>
-                <p>Our daily routine about how we increase our productivity.</p>
+                <p>Our daily routine about how we increase our productivity and efficiency.</p>
               </div>
               <div>
                 {hobbies.map((item) => (
