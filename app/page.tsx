@@ -1,3 +1,4 @@
+import About from "@/components/About";
 import FeaturedProjects from "@/components/FeaturedProjects";
 import Hero from "@/components/Hero";
 import Nav from "@/components/Nav";
@@ -13,6 +14,7 @@ export default function Home() {
       <FeaturedProjects />
       <StyleMode />
       <Testimonials />
+      <About />
     </main>
   );
 }

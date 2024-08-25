@@ -19,7 +19,7 @@ const testimonials = [
   {
     name: "B G",
     position: "CEO @ Clodron",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quisquam nihil, molestias corporis aliquam eum sint quam. Soluta provident veritatis fugiat saepe asperiores. Accusantium facilis maxime veritatis, dolores praesentium exercitationem, et eaque omnis explicabo labore pariatur illum, ex cumque dicta. Repellendus architecto voluptatibus id labore! Hic vero pariatur suscipit officiis.",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quisquam nihil, molestias corporis aliquam eum sint quam. Accusantium facilis maxime veritatis, dolores praesentium exercitationem, et eaque omnis explicabo labore pariatur illum, ex cumque dicta.",
     avatar: "/memoji-avatar-3.png",
   },
   {
@@ -31,7 +31,7 @@ const testimonials = [
   {
     name: "Alvin the cat",
     position: "Director of IT @ Clodron",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, amet ullam. Reiciendis error mollitia saepe, dicta repellendus in minus laborum, sit ex magni cupiditate est. Officia asperiores, harum hic deleniti quod perspiciatis exercitationem, suscipit natus, voluptate non possimus earum sit? Enim asperiores laboriosam minima ad eum quo, repellat tempora recusandae. Quam iste minus voluptatem beatae.",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, amet ullam. Quam iste minus voluptatem beatae.",
     avatar: "/memoji-avatar-5.png",
   },
 ];
@@ -40,7 +40,7 @@ type Props = {};
 
 const Testimonials = (props: Props) => {
   return (
-    <section className="py-16">
+    <section className="py-16 lg:py-24">
       <div className="container">
         <p className="font-semibold  tracking-widest bg-gradient-to-b from-orange-300 to-yellow-300 text-transparent bg-clip-text uppercase text-center text-lg md:text-2xl">
           Happy Clients
@@ -51,17 +51,17 @@ const Testimonials = (props: Props) => {
         <p className="text-center text-white/60 mt-4 md:text-lg lg:text-xl max-w-md mx-auto">
           See what our clients have to say about our work
         </p>
-        <div className="mt-16 flex overflow-x-clip [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+        <div className="mt-16 lg:mt-20 flex overflow-x-clip [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
           <div className="flex gap-8 flex-none">
             {testimonials.map((testimonial) => (
               <div
                 key={testimonial.name}
-                className="bg-neutral-800 border rounded-3xl p-6 relative overflow-hidden z-0 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline  after:oufline-offset-2 after:rounded-3xl after:z-10 after:outline-white/20 after:pointer-events-none  max-w-md">
+                className="bg-neutral-800 border rounded-3xl p-6 relative overflow-hidden z-0 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline  after:oufline-offset-2 after:rounded-3xl after:z-10 after:outline-white/20 after:pointer-events-none  max-w-xs md:p-8 md:max-w-md">
                 <div
                   className="absolute inset-0 opacity-10 -z-10"
                   style={{ backgroundImage: `url(${grainImage.src})` }}></div>
                 <div className="flex gap-4 items-center">
-                  <div className="size-14 bg-neutral-700 inline-flex rounded-full items-center justify-center">
+                  <div className="size-14 bg-neutral-700 inline-flex rounded-full items-center justify-center flex-shrink-0">
                     <Image
                       src={testimonial.avatar}
                       alt={testimonial.name}
@@ -78,7 +78,7 @@ const Testimonials = (props: Props) => {
                     </div>
                   </div>
                 </div>
-                <p className="mt-4 text-sm">{testimonial.text}</p>
+                <p className="mt-4 md:mt-6 text-sm">{testimonial.text}</p>
               </div>
             ))}
           </div>
