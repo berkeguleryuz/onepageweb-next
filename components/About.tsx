@@ -98,7 +98,9 @@ const About = (props: Props) => {
                 <PiStarFourFill className="size-7 text-orange-300" />
                 <h3 className="font-serif text-3xl">My Story</h3>
               </div>
-              <p>Explore our story and see how we started.</p>
+              <p className="text-sm text-white/60">
+                Explore our story and see how we started.
+              </p>
               <Image
                 src="/book-cover.png"
                 alt="about"
@@ -136,7 +138,10 @@ const About = (props: Props) => {
               <div className="inline-flex gap-2 font-bold uppercase items-center justify-center tracking-widest">
                 <PiStarFourFill />
                 <h3>Beyond the work</h3>
-                <p>Our daily routine about how we increase our productivity and efficiency.</p>
+                <p>
+                  Our daily routine about how we increase our productivity and
+                  efficiency.
+                </p>
               </div>
               <div>
                 {hobbies.map((item) => (
