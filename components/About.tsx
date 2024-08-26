@@ -90,6 +90,7 @@ const About = (props: Props) => {
         </p>
         <div className="mt-20">
           <div className="flex flex-col md:mt-20 mt-10 gap-20">
+            {/* 1 */}
             <div className="bg-neutral-800 border rounded-3xl relative after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline  after:oufline-offset-2 after:rounded-3xl z-0 after:z-10 overflow-hidden after:outline-white/20 p-6 after:pointer-events-none">
               <div
                 className="absolute inset-0 -z-10 opacity-10"
@@ -109,20 +110,27 @@ const About = (props: Props) => {
                 priority
               />
             </div>
-
+            {/* 2 */}
             <div className="bg-neutral-800 border rounded-3xl relative after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline  after:oufline-offset-2 after:rounded-3xl z-0 after:z-10 overflow-hidden after:outline-white/20 p-6 after:pointer-events-none">
               <div
                 className="absolute inset-0 -z-10 opacity-10"
                 style={{ backgroundImage: `url(${grainImage.src})` }}></div>
               <div className="inline-flex gap-2 font-bold uppercase items-center justify-center tracking-widest">
                 <PiStarFourFill />
-                <h3>Technologies what we use</h3>
-                <p>Learn about the technologies we use.</p>
+                <h3 className="font-serif text-3xl">
+                  Technologies what we use
+                </h3>
+                <p className="text-sm text-white/60">
+                  Learn about the technologies we use.
+                </p>
               </div>
+              {/* toolbox items */}
               <div>
                 {toolboxItems.map((item) => (
-                  <div key={item.title}>
-                    <span>
+                  <div
+                    key={item.title}
+                    className="inline-flex items-center gap-4 py-2 px-3 outline-2 outline-white/10 rounded-lg">
+                    <span className="font-semibold">
                       <item.icon className="size-10 " />
                     </span>
                     <span>{item.title}</span>
@@ -130,15 +138,15 @@ const About = (props: Props) => {
                 ))}
               </div>
             </div>
-
+            {/* 3 */}
             <div className="bg-neutral-800 border rounded-3xl relative after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline  after:oufline-offset-2 after:rounded-3xl z-0 after:z-10 overflow-hidden after:outline-white/20 p-6 after:pointer-events-none">
               <div
                 className="absolute inset-0 -z-10 opacity-10"
                 style={{ backgroundImage: `url(${grainImage.src})` }}></div>
               <div className="inline-flex gap-2 font-bold uppercase items-center justify-center tracking-widest">
                 <PiStarFourFill />
-                <h3>Beyond the work</h3>
-                <p>
+                <h3 className="font-serif text-3xl">Beyond the work</h3>
+                <p className="text-sm text-white/60">
                   Our daily routine about how we increase our productivity and
                   efficiency.
                 </p>
@@ -152,7 +160,7 @@ const About = (props: Props) => {
                 ))}
               </div>
             </div>
-
+            {/* 4 */}
             <div className="bg-neutral-800 border rounded-3xl relative after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline  after:oufline-offset-2 after:rounded-3xl z-0 after:z-10 overflow-hidden after:outline-white/20 p-6 after:pointer-events-none">
               <div
                 className="absolute inset-0 -z-10 opacity-10"
