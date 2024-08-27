@@ -55,10 +55,13 @@ const FeaturedProjects = (props: Props) => {
           See how we transformed our clients. We are proud of our work.
         </p>
         <div className="flex flex-col md:mt-20 mt-10 gap-20">
-          {portfolioProjects.map((project) => (
+          {portfolioProjects.map((project, projectIndex) => (
             <div
               key={project.title}
-              className="bg-neutral-800 border rounded-3xl relative after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline  after:oufline-offset-2 after:rounded-3xl z-0 after:z-10 overflow-hidden after:outline-white/20 px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 after:pointer-events-none">
+              className="bg-neutral-800 border rounded-3xl after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline  after:oufline-offset-2 after:rounded-3xl z-0 after:z-10 overflow-hidden after:outline-white/20 px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 after:pointer-events-none sticky"
+              style={{
+                top: `calc(64px + ${projectIndex * 20}px)`,
+              }}>
               <div
                 className="absolute inset-0 -z-10 opacity-10"
                 style={{ backgroundImage: `url(${grainImage.src})` }}></div>
