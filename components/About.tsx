@@ -1,8 +1,8 @@
-import React from "react";
+import React, { Fragment } from "react";
 import grainImage from "../public/grain.jpg";
 import { PiStarFourFill } from "react-icons/pi";
 import Image from "next/image";
-import { DiGithub, DiJavascript, DiReact } from "react-icons/di";
+import { DiGithub, DiReact } from "react-icons/di";
 import { SiSolidity, SiTailwindcss, SiVercel } from "react-icons/si";
 import { RiNextjsFill } from "react-icons/ri";
 import mapImage from "../public/world-map.png";
@@ -116,7 +116,7 @@ const About = (props: Props) => {
               <div className="flex flex-col items-center justify-center">
                 <div className="inline-flex gap-2 font-bold uppercase items-center justify-center tracking-widest">
                   <PiStarFourFill className="size-7 text-orange-300" />
-                  <h3 className="font-serif text-3xl">My Story</h3>
+                  <h3 className="font-serif text-3xl">Our Story</h3>
                 </div>
                 <p className="text-sm font-bold uppercase tracking-widest text-white/60">
                   Explore our story and see how we started.
@@ -152,30 +152,38 @@ const About = (props: Props) => {
               {/* toolbox items */}
               <div>
                 <div className="flex [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
-                  <div className="flex flex-none py-0.5 gap-6 pr-6">
-                    {toolboxItems.map((item) => (
-                      <div
-                        key={item.title}
-                        className="inline-flex items-center gap-4 py-2 px-3 outline-2 outline-white/10 rounded-lg">
-                        <div className="bg-gradient-to-r from-yellow-500 to-orange-500 rounded-2xl border p-2">
-                          <item.icon className="size-10" />
-                        </div>
-                        <span className="font-semibold">{item.title}</span>
-                      </div>
+                  <div className="flex flex-none py-0.5 gap-6 pr-6 animate-move-left [animation-duration:30s]">
+                    {[...new Array(2)].fill(0).map((_, idx) => (
+                      <Fragment key={idx}>
+                        {toolboxItems.map((item) => (
+                          <div
+                            key={item.title}
+                            className="inline-flex items-center gap-4 py-2 px-3 outline-2 outline-white/10 rounded-lg">
+                            <div className="bg-gradient-to-r from-yellow-500 to-orange-500 rounded-2xl border p-2">
+                              <item.icon className="size-10" />
+                            </div>
+                            <span className="font-semibold">{item.title}</span>
+                          </div>
+                        ))}
+                      </Fragment>
                     ))}
                   </div>
                 </div>
                 <div className="flex [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] mt-6">
-                  <div className="flex flex-none py-0.5 gap-6 pr-6 md:gap-24">
-                    {[...toolboxItems].reverse().map((item) => (
-                      <div
-                        key={item.title}
-                        className="inline-flex items-center gap-4 py-2 px-3 outline-2 outline-white/10 rounded-lg">
-                        <div className="bg-gradient-to-r from-yellow-500 to-orange-500 rounded-2xl border p-2">
-                          <item.icon className="size-10" />
-                        </div>
-                        <span className="font-semibold">{item.title}</span>
-                      </div>
+                  <div className="flex flex-none py-0.5 gap-6 pr-6 animate-move-right [animation-duration:30s]">
+                    {[...new Array(2)].fill(0).map((_, idx) => (
+                      <Fragment key={idx}>
+                        {[...toolboxItems].reverse().map((item) => (
+                          <div
+                            key={item.title}
+                            className="inline-flex items-center gap-4 py-2 px-3 outline-2 outline-white/10 rounded-lg">
+                            <div className="bg-gradient-to-r from-yellow-500 to-orange-500 rounded-2xl border p-2">
+                              <item.icon className="size-10" />
+                            </div>
+                            <span className="font-semibold">{item.title}</span>
+                          </div>
+                        ))}
+                      </Fragment>
                     ))}
                   </div>
                 </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 
 import Image from "next/image";
 import grainImage from "../public/grain.jpg";
@@ -51,35 +51,43 @@ const Testimonials = (props: Props) => {
         <p className="text-center text-white/60 mt-4 md:text-lg lg:text-xl max-w-md mx-auto">
           See what our clients have to say about our work
         </p>
-        <div className="mt-16 lg:mt-20 flex overflow-x-clip [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
-          <div className="flex gap-8 flex-none">
-            {testimonials.map((testimonial) => (
-              <div
-                key={testimonial.name}
-                className="bg-neutral-800 border rounded-3xl p-6 relative overflow-hidden z-0 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline  after:oufline-offset-2 after:rounded-3xl after:z-10 after:outline-white/20 after:pointer-events-none  max-w-xs md:p-8 md:max-w-md">
-                <div
-                  className="absolute inset-0 opacity-10 -z-10"
-                  style={{ backgroundImage: `url(${grainImage.src})` }}></div>
-                <div className="flex gap-4 items-center">
-                  <div className="size-14 bg-neutral-700 inline-flex rounded-full items-center justify-center flex-shrink-0">
-                    <Image
-                      src={testimonial.avatar}
-                      alt={testimonial.name}
-                      width={100}
-                      height={100}
-                      className="max-h-full p-1"
-                      priority
-                    />
-                  </div>
-                  <div>
-                    <div className="font-semibold">{testimonial.name}</div>
-                    <div className="text-sm text-white/40">
-                      {testimonial.position}
+        <div className="mt-12 lg:mt-20 flex overflow-x-clip [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] py-4">
+          <div className="flex gap-8 pr-8 flex-none animate-move-left [animation-duration:60s] hover:[animation-play-state:paused]">
+            {[...new Array(2)].fill(0).map((_, idx) => (
+              <Fragment key={idx}>
+                {testimonials.map((testimonial) => (
+                  <div
+                    key={testimonial.name}
+                    className="bg-neutral-800 border rounded-3xl p-6 relative overflow-hidden z-0 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline  after:oufline-offset-2 after:rounded-3xl after:z-10 after:outline-white/20 after:pointer-events-none max-w-xs md:p-8 md:max-w-md hover:-rotate-3 transition duration-300">
+                    <div
+                      className="absolute inset-0 opacity-10 -z-10"
+                      style={{
+                        backgroundImage: `url(${grainImage.src})`,
+                      }}></div>
+                    <div className="flex gap-4 items-center">
+                      <div className="size-14 bg-neutral-700 inline-flex rounded-full items-center justify-center flex-shrink-0">
+                        <Image
+                          src={testimonial.avatar}
+                          alt={testimonial.name}
+                          width={100}
+                          height={100}
+                          className="max-h-full p-1"
+                          priority
+                        />
+                      </div>
+                      <div>
+                        <div className="font-semibold">{testimonial.name}</div>
+                        <div className="text-sm text-white/40">
+                          {testimonial.position}
+                        </div>
+                      </div>
                     </div>
+                    <p className="mt-4 md:mt-6 md:text-sm text-xs">
+                      {testimonial.text}
+                    </p>
                   </div>
-                </div>
-                <p className="mt-4 md:mt-6 text-sm">{testimonial.text}</p>
-              </div>
+                ))}
+              </Fragment>
             ))}
           </div>
         </div>
