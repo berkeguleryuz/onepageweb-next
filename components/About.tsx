@@ -1,4 +1,5 @@
-import React, { Fragment } from "react";
+"use client";
+import React, { Fragment, useRef } from "react";
 import grainImage from "../public/grain.jpg";
 import { PiStarFourFill } from "react-icons/pi";
 import Image from "next/image";
@@ -6,6 +7,7 @@ import { DiGithub, DiReact } from "react-icons/di";
 import { SiSolidity, SiTailwindcss, SiVercel } from "react-icons/si";
 import { RiNextjsFill } from "react-icons/ri";
 import mapImage from "../public/world-map.png";
+import { motion } from "framer-motion";
 
 type Props = {};
 
@@ -94,6 +96,7 @@ const hobbies = [
 ];
 
 const About = (props: Props) => {
+  const thirdRef = useRef(null);
   return (
     <section className="py-16 lg:py-24">
       <div className="container">
@@ -207,20 +210,22 @@ const About = (props: Props) => {
                 </p>
               </div>
 
-              <div className="relative flex-1 mt-2">
+              <div className="relative flex-1 mt-2" ref={thirdRef}>
                 {hobbies.map((item) => (
-                  <div
+                  <motion.div
                     key={item.title}
-                    className="inline-flex gap-2 px-6 bg-gradient-to-r from-yellow-300 to-orange-500 items-center rounded-full py-1.5 absolute "
+                    className="inline-flex gap-2 px-6 bg-gradient-to-r from-yellow-300 to-orange-500 items-center rounded-full py-1.5 absolute"
                     style={{
                       left: item.left,
                       top: item.top,
-                    }}>
+                    }}
+                    drag
+                    dragConstraints={thirdRef}>
                     <span className="text-neutral-950 font-medium">
                       {item.title}
                     </span>
                     <span className="p-1">{item.icon}</span>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </div>
@@ -235,7 +240,9 @@ const About = (props: Props) => {
                 className="h-full w-full object-contain"
                 priority
               />
-              <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-2/3 bg-gradient-to-l from-yellow-500 to-orange-500 -rotate-3 rounded-full p-2 after:[content-''] after:absolute after:inset-0 after:outline-2 after:outline  after:oufline-offset-2 after:rounded-full z-0 after:z-10">
+              <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-2/3  -rotate-3 rounded-full p-2 after:[content-''] after:absolute after:inset-0 after:outline-2 after:outline  after:oufline-offset-2 after:rounded-full z-0 after:z-10">
+                <div className="absolute inset-0 rounded-full bg-gradient-to-l from-yellow-500 to-orange-500 -z-20 animate-ping duration-300"></div>
+                <div className="absolute inset-0 rounded-full bg-gradient-to-l from-yellow-500 to-orange-500 -z-10"></div>
                 <Image
                   src="/logo.png"
                   alt="about"
