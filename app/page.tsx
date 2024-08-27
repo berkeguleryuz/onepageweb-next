@@ -1,5 +1,7 @@
 import About from "@/components/About";
+import CallToAction from "@/components/CallToAction";
 import FeaturedProjects from "@/components/FeaturedProjects";
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Nav from "@/components/Nav";
 import StyleMode from "@/components/StyleMode";
@@ -15,6 +17,8 @@ export default function Home() {
       <StyleMode />
       <Testimonials />
       <About />
+      <CallToAction />
+      <Footer />
     </main>
   );
 }
