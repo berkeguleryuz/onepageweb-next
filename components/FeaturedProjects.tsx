@@ -60,7 +60,7 @@ const FeaturedProjects = (props: Props) => {
               key={project.title}
               className="bg-neutral-800 border rounded-3xl after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline  after:oufline-offset-2 after:rounded-3xl z-0 after:z-10 overflow-hidden after:outline-white/20 px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 after:pointer-events-none sticky"
               style={{
-                top: `calc(64px + ${projectIndex * 20}px)`,
+                top: `calc(64px + ${projectIndex * 64}px)`,
               }}>
               <div
                 className="absolute inset-0 -z-10 opacity-10"
