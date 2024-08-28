@@ -18,8 +18,7 @@ const CallToAction = (props: Props) => {
                 Lets create something great
               </h2>
               <p className="text-sm md:text-xl mt-2">
-                Ready to get started of your project? Connect and discover with
-                us.
+                Are you ready to take your business to the next level?
               </p>
             </div>
             <div>
